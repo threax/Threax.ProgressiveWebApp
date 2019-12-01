@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,15 +9,13 @@ namespace Threax.ProgressiveWebApp
     public class WebManifestProvider : IWebManifestProvider
     {
         private DisplayConfig displayConfig;
-        private IUrlHelper urlHelper;
 
-        public WebManifestProvider(DisplayConfig displayConfig, IUrlHelper urlHelper)
+        public WebManifestProvider(DisplayConfig displayConfig)
         {
             this.displayConfig = displayConfig;
-            this.urlHelper = urlHelper;
         }
 
-        public WebManifest CreateManifest()
+        public WebManifest CreateManifest(IUrlHelper urlHelper)
         {
             return new WebManifest()
             {
