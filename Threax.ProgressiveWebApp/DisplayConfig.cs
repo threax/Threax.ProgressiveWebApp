@@ -33,7 +33,7 @@ namespace Threax.ProgressiveWebApp
         /// <summary>
         /// The name of the favicon. Will be served as the favicon.
         /// </summary>
-        public string Favicon { get; set; } = "~/icons/favicon.ico";
+        public string Favicon { get; set; } = "~/Icons/favicon.ico";
 
         /// <summary>
         /// The description for the app. Defaults to the SiteName.
@@ -55,7 +55,7 @@ namespace Threax.ProgressiveWebApp
         /// </summary>
         public Icon Icon { get; set; } = new Icon()
         {
-            src = "~/icons/icon.png",
+            src = "~/Icons/icon.png",
             sizes = "512x512"
         };
 
